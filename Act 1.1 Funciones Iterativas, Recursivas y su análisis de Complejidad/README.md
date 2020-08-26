@@ -4,7 +4,7 @@ La complejida del algoritmo es lineal en el peor de los casos, o O(n); porque so
 
 ### función: sumaRecursiva()
 ##### Análisis de complejidad temporal
-La complejida del algoritmo es lineal en el peor de los casos, o O(n); porque va creando ...
+La complejida del algoritmo es lineal en el peor de los casos, o O(n); porque solo va creando una recursión a la vez. Osea, no se ramifican las recursiones.
 
 ### función: sumaDirecta()
 ##### Análisis de complejidad temporal
