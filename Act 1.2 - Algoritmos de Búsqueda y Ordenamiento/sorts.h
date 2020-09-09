@@ -75,7 +75,7 @@ private:
 	}
 
 	int busqBinaria(vector<T>& arreglo, int value, int start, int end){
-		if (end-start >= 1){
+		if (end-start > 0){
 			int mitad = floor((start+end)/2);
 			if (arreglo[mitad] == value){
 				return mitad;
@@ -85,7 +85,7 @@ private:
 			}
 			return busqBinaria(arreglo, value, mitad+1, end);
 		}
-		return -1;
+		return start-1;
 	}
 
 public:
