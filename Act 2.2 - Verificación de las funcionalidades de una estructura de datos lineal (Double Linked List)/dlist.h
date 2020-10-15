@@ -16,16 +16,6 @@ class Node{
 		val = val_;
 	}
 
-	void add(Node<T>* node){
-		if (next == 0){
-			node->previous = this;
-			next = node;
-		}
-		else{
-			next->add(node);
-		}
-	}
-
 	int find(T _val, int counter){
 		if (val == _val){
 			return counter;
