@@ -1,3 +1,10 @@
+/*
+ *  sorts.h
+ *
+ *  Created on: 07/09/2020
+ *  Author: Luis Ramirez
+ */
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -12,20 +19,6 @@ private:
 		T temp = arreglo[index2];
 		arreglo[index2] = arreglo[index1];
 		arreglo[index1] = temp;
-	}
-
-	void printVector(vector<T> arreglo){
-		for (int i=0; i<arreglo.size(); i++){
-			cout << arreglo[i] << ", "; 
-		}
-		cout << endl;
-	}
-
-	void printVector(vector<T> arreglo, int start, int end){
-		for (int i=start; i<=end; i++){
-			cout << arreglo[i] << ", "; 
-		}
-		cout << endl;
 	}
 
 	void merge(vector<T>& arreglo, int start, int end){
@@ -85,7 +78,7 @@ private:
 			}
 			return busqBinaria(arreglo, value, mitad+1, end);
 		}
-		return start-1;
+		return start;
 	}
 
 public:
@@ -105,7 +98,7 @@ public:
 	}
 
 	void ordenaBurbuja(vector<T>& arreglo){
-		for (int i=1; i<arreglo.size()-1; i++){
+		for (int i=1; i<arreglo.size(); i++){
 			for (int j=0; j<arreglo.size()-i; j++){
 				if (arreglo[j+1] < arreglo[j]){
 					swap(arreglo, j+1, j);
