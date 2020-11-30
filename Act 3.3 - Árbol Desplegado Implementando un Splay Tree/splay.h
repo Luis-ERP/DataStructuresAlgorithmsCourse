@@ -21,7 +21,7 @@ template<class T>
 class SplayTree{
 private:
 	Node<T> *root;
-	int size=0;
+	int length=0;
 	
 public:
 	SplayTree();
@@ -63,7 +63,7 @@ void SplayTree<T>::add(T val){
 	}else{
 		root=new Node<T>(val);
 	}
-	size+=1;
+	length+=1;
 }
 	
 
@@ -89,7 +89,7 @@ void SplayTree<T>::remove(T val){
 				root=root->splay(root,p);
 		}
 	}
-	size-=1;
+	length-=1;
 }
 
 
@@ -100,7 +100,7 @@ void SplayTree<T>::removeAll(){
 	}
 	delete root;
 	root=0;
-	size=0;
+	length=0;
 }
 	
 
@@ -158,5 +158,5 @@ string SplayTree<T>::preorder() const{
 
 template<class T>
 int SplayTree<T>::size(){
-	return size;
+	return length;
 }

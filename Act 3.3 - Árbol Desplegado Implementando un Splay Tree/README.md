@@ -15,11 +15,11 @@ Y para ejecutar el programa:
 ## Análisis de complejidad de los algoritmos
 ### Función: add()
 #### Análisis de complejidad temporal
-La función add() agrega un nuevo valor al splay. En el peor de los casos, insertar un elemento puede tomar O(log n) por los balances que realiza para agregar el elemento a la raiz.
+La función add() agrega un nuevo valor al splay, recorre de forma recursiva el árbol y para el mejor de los casos, en cada iteración, se reduce a la mitad las posibilidades en las que recorre el árbol, tal que un BST. Por lo que su complejidad puede quedar en O(log n). Sin embargo, como primero agrega el elemento y luego se llama la función de reacomodo, existe la posibilidad de que el árbol esté desbalanceado y la complejidad aumente a O(n).
 
 ### Función: remove()
 #### Análisis de complejidad temporal
-La función remove() quita un valor del splay. Al igual que la función add(), la función remove() tiene una complejidad O(log n) porque realiza un procedimiento similar para acomodar el árbol.
+La función remove() quita un valor del splay. Al igual que la función add(), la función remove() recorre el árbol de forma iterativa para buscar el nodo a eliminar, por lo que su complejidad para un caso estándar se queda en O(log n). También tiene el mismo problema que la función add() de que primero se busca al aobjeto y una que se elimina hace el reacomodo por lo que es posible que la alcance una complejidad de O(n) para el peor de los casos.
 
 ### Función: find()
 #### Análisis de complejidad temporal
